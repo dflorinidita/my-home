@@ -165,3 +165,11 @@
   EOF
   ```
 - **Reading Input with a Timeout:** `read -t TIMEOUT VAR`
+  ```
+  echo "Enter your name (you have 5 seconds):"
+  if read -t 5 name; then
+    echo "Hello, $name"
+  else
+    echo "Sorry, you did not respond in time."
+  fi
+  ```
