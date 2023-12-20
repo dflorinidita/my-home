@@ -148,6 +148,51 @@
 ## Debugging
 - **Tracing Execution:** `set -x` and `set +x`
 - **Printing Shell Input Lines:** `set -v`
+- **Use Bash Strict Mode:** `set -euo pipefail`
+## Setting IFS
+```
+IFS=$'\n\t'
+```
+```
+#!/bin/bash
+names=(
+  "Aaron Maxwell"
+  "Wayne Gretzky"
+  "David Beckham"
+  "Anderson da Silva"
+)
+
+echo "With default IFS value..."
+for name in ${names[@]}; do
+  echo "$name"
+done
+
+echo ""
+echo "With strict-mode IFS value..."
+IFS=$'\n\t'
+for name in ${names[@]}; do
+  echo "$name"
+done
+```
+This is the output:
+```
+With default IFS value...
+Aaron
+Maxwell
+Wayne
+Gretzky
+David
+Beckham
+Anderson
+da
+Silva
+
+With strict-mode IFS value...
+Aaron Maxwell
+Wayne Gretzky
+David Beckham
+Anderson da Silva
+```
 
 ## Best Practices
 - **Double Quote to Prevent Globbing and Word Splitting:** Always use `"${var}"`
