@@ -73,6 +73,22 @@
     ((var--))
   done
   ```
+  ```
+  counter=10
+  loops=10
+  
+  var="$counter"
+  until [[ $loops -eq 0 ]]; do
+  	until [[ $var -eq 0 ]]; do
+  	  echo "Variable: $var"
+  	  ((var--))
+  	  sleep 0.5s
+  	done
+    echo loop $loops DONE
+    var="$counter"
+    ((loops--))
+  done
+  ```
 
 ### Case Statement
 - **Matching Patterns:**
