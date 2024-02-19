@@ -1,0 +1,17 @@
+# source file
+# Files needed : 
+#                       $ROOT_PATH/aliases/colors
+#
+#
+#
+
+ROOT_PATH="/root/florin/my-home"
+
+source $ROOT_PATH/aliases/colors
+function echo_color() {
+    color=$1
+    [[ $1 == "help" ]] &&  echo "Black Red Green Yellow Blue Purple Cyan White BBlack BRed BGreen BYellow BBlue BPurple BCyan BWhite UBlack URed UGreen UYellow UBlue UPurple UCyan UWhite On_Black On_Red On_Green On_Yellow On_Blue On_Purple On_Cyan On_White IBlack IRed IGreen IYellow IBlue IPurple ICyan IWhite BIBlack BIRed BIGreen BIYellow BIBlue BIPurple BICyan BIWhite On_IBlack On_IRed On_IGreen On_IYellow On_IBlue On_IPurple On_ICyan On_IWhite"
+    shift
+    text=$@
+    echo -e " ${!color} $text $Color_Off "
+}
