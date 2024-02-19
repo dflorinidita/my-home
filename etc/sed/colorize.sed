@@ -1,0 +1,13 @@
+s/ ON /\x1b[1;32m&\x1b[0m/g
+s/ OFF /\x1b[1;31m&\x1b[0m/g
+s/ N\/A /\x1b[1;33m&\x1b[0m/g
+s/ OK /\x1b[30;42m&\x1b[0m/g
+s/ KO /\x1b[30;41m&\x1b[0m/g
+s/ WARNING /\x1b[1;35m&\x1b[0m/g
+s/ NORMAL /\x1b[1;36m&\x1b[0m/g
+s/ HALTED /\x1b[1;31m&\x1b[0m/g
+s/ READY_TO_RUN /\x1b[1;32m&\x1b[0m/g
+s/ BACKUP /\x1b[1;33m&\x1b[0m/g
+s/ REGULATED /\x1b[1;34m&\x1b[0m/g
+s/ IDLE /\x1b[1;30m&\x1b[0m/g
+s/ ACTIVE /\x1b[1;37m&\x1b[0m/g
